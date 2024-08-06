@@ -25,13 +25,9 @@ jobs:
     - name: Install kustomize
       run: ./tests/gh-actions/install_kustomize.sh
 
-    - name: Install Istio
-      run: ./tests/gh-actions/install_istio.sh
-
     - name: Build & Apply manifests
       run: |
-        cd common/dex
-        kustomize build overlays/istio | kubectl apply -f -
+        while ! kustomize build ./tests/gh-actions/deploy-dex-login-environment | kubectl apply -f -; do echo "Retrying to apply resources"; sleep 20; done
         kubectl wait --for=condition=Ready pods --all --all-namespaces --timeout 180s
 
     - name: port forward
@@ -43,5 +39,4 @@ jobs:
     - name: test dex login
       run: |
         pip3 install requests
-        # currently broken
-        # ./tests/gh-actions/test_dex_login.py
+        ./tests/gh-actions/test_dex_login.py
