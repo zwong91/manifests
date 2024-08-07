@@ -60,35 +60,35 @@ resources:
 
 
 # Kubeflow Pipelines
-- ../apps/pipeline/upstream/env/cert-manager/platform-agnostic-multi-user
-# Katib
-- ../apps/katib/upstream/installs/katib-with-kubeflow
-# Central Dashboard
-- ../apps/centraldashboard/overlays/oauth2-proxy
-# Admission Webhook
-- ../apps/admission-webhook/upstream/overlays/cert-manager
-# Jupyter Web App
-- ../apps/jupyter/jupyter-web-app/upstream/overlays/istio
-# Notebook Controller
-- ../apps/jupyter/notebook-controller/upstream/overlays/kubeflow
-# Profiles + KFAM
-- ../apps/profiles/upstream/overlays/kubeflow
-# PVC Viewer
-- ../apps/pvcviewer-controller/upstream/base
-# Volumes Web App
-- ../apps/volumes-web-app/upstream/overlays/istio
-# Tensorboards Controller
-- ../apps/tensorboard/tensorboard-controller/upstream/overlays/kubeflow
-# Tensorboard Web App
-- ../apps/tensorboard/tensorboards-web-app/upstream/overlays/istio
-# Training Operator
-- ../apps/training-operator/upstream/overlays/kubeflow
+# - ../apps/pipeline/upstream/env/cert-manager/platform-agnostic-multi-user
+# # Katib
+# - ../apps/katib/upstream/installs/katib-with-kubeflow
+# # Central Dashboard
+# - ../apps/centraldashboard/overlays/oauth2-proxy
+# # Admission Webhook
+# - ../apps/admission-webhook/upstream/overlays/cert-manager
+# # Jupyter Web App
+# - ../apps/jupyter/jupyter-web-app/upstream/overlays/istio
+# # Notebook Controller
+# - ../apps/jupyter/notebook-controller/upstream/overlays/kubeflow
+# # Profiles + KFAM
+# - ../apps/profiles/upstream/overlays/kubeflow
+# # PVC Viewer
+# - ../apps/pvcviewer-controller/upstream/base
+# # Volumes Web App
+# - ../apps/volumes-web-app/upstream/overlays/istio
+# # Tensorboards Controller
+# - ../apps/tensorboard/tensorboard-controller/upstream/overlays/kubeflow
+# # Tensorboard Web App
+# - ../apps/tensorboard/tensorboards-web-app/upstream/overlays/istio
+# # Training Operator
+# - ../apps/training-operator/upstream/overlays/kubeflow
 # User namespace
-- ../common/user-namespace/base
+# - ../common/user-namespace/base
 
 # KServe
-- ../contrib/kserve/kserve
-- ../contrib/kserve/models-web-app/overlays/kubeflow
+# - ../contrib/kserve/kserve
+# - ../contrib/kserve/models-web-app/overlays/kubeflow
 
 # Ray and Seldon resources (commented out by default)
 # Ray does not support Istio yet and integration is in alpha state.
